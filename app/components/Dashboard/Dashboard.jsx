@@ -1,11 +1,11 @@
 
 import React from 'react'
-import Menutray from "./Menutray"
-import Card from "./Card"
-import ChartCard from './Charts/ChartCard'
-import Pie from './Charts/Pie'
-import Schedule from './Charts/Schedule'
-import MainChart from './Charts/MainChart'
+import Menutray from "./Menutray.jsx"
+import Card from "./Card.jsx"
+import ChartCard from './Charts/ChartCard.jsx'
+import Pie from './Charts/Pie.jsx'
+import Schedule from './Charts/Schedule.jsx'
+import MainChart from './Charts/MainChart.jsx'
 
 const Dashboard = ({user}) => {
     const cardData=[{

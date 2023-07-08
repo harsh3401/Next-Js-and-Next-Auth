@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-import BoxItem from './Leftbox/BoxItem'
+import BoxItem from './Leftbox/BoxItem.jsx'
 
 const LeftBox = () => {
   const [menuvis,setMenu]=useState(false);

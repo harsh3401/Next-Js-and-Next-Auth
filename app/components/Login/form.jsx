@@ -1,6 +1,6 @@
 
-import { AuthData } from "./AuthData"
-import  AuthButton  from "../Buttons/AuthButtons"
+import { AuthData } from "./AuthData.jsx"
+import  AuthButton  from "../Buttons/AuthButtons.jsx"
 import React from "react";
 const Login = () => {
   const [formState,setFormState] = useState(true);

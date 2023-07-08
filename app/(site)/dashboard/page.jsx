@@ -1,7 +1,7 @@
 'use client';
 import React,{useEffect} from "react";
-import LeftBox from "../../components/Dashboard/LeftBox";
-import Dashboard from "../../components/Dashboard/Dashboard";
+import LeftBox from "../../components/Dashboard/Leftbox.jsx";
+import Dashboard from "../../components/Dashboard/Dashboard.jsx";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 // eslint-disable-next-line @next/next/no-async-client-component

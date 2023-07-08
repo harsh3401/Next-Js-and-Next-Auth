@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Branding } from "../../components/Login/Branding";
-import Login  from "../../components/Login/Login";
+import { Branding } from "../../components/Login/Branding.jsx";
+import Login  from "../../components/Login/Login.jsx";
 import { useSession} from "next-auth/react";
 import { useRouter } from "next/navigation";
 

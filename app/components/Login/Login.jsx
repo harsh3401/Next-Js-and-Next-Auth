@@ -1,8 +1,8 @@
 'use client';
 import React ,{ useState,useEffect } from "react";
 
-import { AuthData } from "./AuthData"
-import  AuthButton  from "../Buttons/AuthButtons"
+import { AuthData } from "./AuthData.jsx"
+import  AuthButton  from "../Buttons/AuthButtons.jsx"
 import {  getProviders } from "next-auth/react"
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";

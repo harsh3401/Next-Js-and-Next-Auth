@@ -1,22 +1,16 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client'
 
-const client = globalThis.prisma || new PrismaClient();
-if (process.env.NODE_ENV === "production") globalThis.prisma = client;
+// Avoid instantiating too many instances of Prisma in development
+// https://www.prisma.io/docs/support/help-articles/nextjs-prisma-client-dev-practices#problem
+let prisma
 
-export default client;
+if (process.env.NODE_ENV === 'production') {
+  prisma = new PrismaClient()
+} else {
+  if (!global.prisma) {
+    global.prisma = new PrismaClient()
+  }
+  prisma = global.prisma
+}
 
-
-// let db;
-
-// //check if we are running in production mode
-// if (process.env.NODE_ENV === 'production') {
-//   db = new PrismaClient()
-// } else {
-// //check if there is already a connection to the database
-//   if (!global.db) {
-//     global.db = new PrismaClient()
-//   }
-//   db = global.db
-// }
-
-// export default db ;
+export default prisma

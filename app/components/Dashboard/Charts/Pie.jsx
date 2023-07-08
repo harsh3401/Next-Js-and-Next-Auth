@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Pie = () => {
+const Pie = ({data}) => {
+    console.log("Pie data---------->",data);
     const pieData=[{
         name:"Basic Tees",
         percentage:"55%",
@@ -21,14 +22,14 @@ const Pie = () => {
            
                 {pieData.map((item,index)=>{
                     
-                    // var s = apiData?apiData[index].title.substring(0, Math.min(apiData[index].title.length, 20)):"test";
+                    var s = data.length>0?data[index].title.substring(0, Math.min(data[index].title.length, 20)):item["name"];
                     return <div className="flex-col pb-4" key={item.name}>
                         <div className="flex items-center ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
   <circle cx="5.5" cy="5.5" r="5.5" fill={item.fill}/>
 </svg>
                             <div>
-                            <div className="font-montserrat text-sm font-bold ml-3">{item.name}</div>
+                            <div className="font-montserrat text-sm font-bold ml-3">{s}</div>
                             <div className="font-lato font-thin text-xs text-secondarytext ml-3">{item.percentage}</div>
                             </div>
                         </div>

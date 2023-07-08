@@ -7,7 +7,7 @@ import Pie from './Charts/Pie.jsx'
 import Schedule from './Charts/Schedule.jsx'
 import MainChart from './Charts/MainChart.jsx'
 
-const Dashboard = ({user}) => {
+const Dashboard = ({user,data}) => {
     const cardData=[{
         type:"1",
         desc:"Total Revenues",
@@ -46,7 +46,7 @@ const Dashboard = ({user}) => {
       </svg>
     },
 ]
-const chartConfig=[{heading:"Top products",helper:"May-June 2021",component:<Pie />,},{heading:"Today’s schedule",helper:"See all",component:<Schedule/>}]
+const chartConfig=[{heading:"Top products",helper:"May-June 2021",component:<Pie data={data}/>,},{heading:"Today’s schedule",helper:"See all",component:<Schedule/>}]
 
   return (
     <div  className="flex-col mt-16  max-w-full mb-24  mx-14   	">

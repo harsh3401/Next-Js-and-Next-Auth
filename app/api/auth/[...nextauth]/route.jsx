@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
-import bcrypt from "bcryptjs-react";
+import bcrypt from "bcrypt"
 
 // See here: https://github.com/prisma/prisma-client-js/issues/228#issuecomment-618433162
 
@@ -46,7 +46,7 @@ export const authOptions = {
         if (!user || !user?.hashedPassword) {
           throw new Error("No user found");
         }
-
+        console.log("Comparing");
         // check to see if password matches
         const passwordMatch = await bcrypt.compare(
           credentials.password,
@@ -70,7 +70,7 @@ export const authOptions = {
   session: {
     strategy: "jwt",
   },
-  // debug: process.env.NODE_ENV === "development",
+  debug: process.env.NODE_ENV === "development",
 };
 const handler = NextAuth(authOptions);
 

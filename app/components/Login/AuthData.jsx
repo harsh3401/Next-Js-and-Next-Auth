@@ -16,11 +16,16 @@ export const AuthData = ({formState}) => {
   const signupFormSubmit =  (e) => {
     e.preventDefault()
     axios.post('/api/register', data)
-    .then(() => toast.success('User has been registered!'))
+    .then(() => {toast.success('User has been registered!');
+  loginFormSubmit();})
     .catch(() => toast.error('Something went wrong!'))
   }
-  const loginFormSubmit = async (e) => {
-    e.preventDefault()
+  const loginFormSubmit = async (e=null) => {
+    if(e)
+    {
+      e.preventDefault()
+    }
+   
     signIn('credentials',
      {...data, redirect: false
     })

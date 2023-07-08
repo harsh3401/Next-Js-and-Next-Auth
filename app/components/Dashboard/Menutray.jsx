@@ -10,7 +10,7 @@ const Menutray = ({user}) => {
   return (
     <div className=" justify-between items-center h-8 flex  ">
         <div className="relative ">
-      <input className="p-2 w-70 md:w-48 h-8 rounded-xl " placeholder="Search..." type="text"/>
+      <input className="p-2 w-52 md:w-48 h-8 rounded-xl " placeholder="Search..." type="text"/>
       <svg  className="absolute -mt-6 right-4 " xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
   <circle cx="5" cy="5" r="4.5" stroke="#858585"/>
   <line x1="8.35355" y1="7.64645" x2="12.3536" y2="11.6464" stroke="#858585"/>

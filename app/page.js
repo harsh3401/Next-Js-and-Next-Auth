@@ -1,10 +1,13 @@
-import { getServerSession } from "next-auth";
+"use client";
 import { User } from "./components/test";
-import { authOptions } from "./api/auth/[...nextauth]/route";
-export default async function Home() {
-  const session = await getServerSession(authOptions);
-  console.log(session);
-
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+// eslint-disable-next-line @next/next/no-async-client-component
+export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/signin");
+  });
   return (
     <main
       style={{
@@ -15,9 +18,7 @@ export default async function Home() {
       }}
     >
       <div>
-        <h1>Server Session</h1>
-        <pre>{JSON.stringify(session)}</pre>
-        <User />
+        <h1>Redirecting</h1>
       </div>
     </main>
   );

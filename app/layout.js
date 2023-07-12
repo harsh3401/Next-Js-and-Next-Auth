@@ -6,7 +6,7 @@ import Provider from "./context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "OpeninApp",
+  title: "NextJSDash - By Harsh Jain",
   description: "Made By Harsh Jain",
 };
 
